@@ -70,7 +70,10 @@ const App = () => {
 
   const handleChange = (stateFunction) => (event) => stateFunction(event.target.value)
 
-  const del = (id) => delPerson(id).then(data=>setPersons(persons.filter(person=>person.id!=data.id)))
+  const del = (id) => {
+    delPerson(id)
+    setPersons(persons.filter(person=>person.id!=id))
+  }
 
   return (
     <div>
