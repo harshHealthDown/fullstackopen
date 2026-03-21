@@ -27,11 +27,13 @@ let persons = [
 ]
 
 app.use(cors())
+app.use(express.static('dist'))
 
 morgan.token('data',function(req,res){
     return JSON.stringify(req.body)
 })
 
+// app.use(morgan('tiny'))
 app.use(morgan(function(tokens,req,res) {
     return [
         tokens.method(req,res),
@@ -78,8 +80,7 @@ const generateId = () => {
 
 app.post('/api/persons',(request,response) => {
     const person = request.body
-
-    if (!person.name && !person.number) {
+    if (person.name==='' && person.number==='') {
         return response.status(400).json({error: 'not enough data provided'})
     }
     if (persons.find(p=>p.name==person.name)) {
