@@ -1,2 +1,4 @@
 i created this backend server from learning from this fullstackopen course
 and this is the link to my phonebook website https://fullstackopen-courset.onrender.com/api/persons
+i used this course-excercise solution repository and give the link to this repository to the render.com for my application and i configure the path so that render runs all the command in part3 folder.(i am telling this because in 3.11 excercise you have tell me that don't not deploy the frontend code directly but in this case i have to. i can do that also but i didn't because then i have to create one more repository for it)
+Thanks for this website for teaching fullstack web dev in easy way it helps me so much.
